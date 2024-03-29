@@ -36,7 +36,7 @@ struct ContentView: View {
                 Spacer()
                 Text(visibalResult)
                     .padding()
-                    .foregroundColor(Color.green)
+                    .foregroundColor(Color.white)
                     .font(.system(size: 30,weight: .heavy))
                 
             }.frame(maxWidth: .infinity,maxHeight: .infinity)
@@ -56,7 +56,7 @@ struct ContentView: View {
                 
             }
             
-            .background(Color.purple.ignoresSafeArea())
+            .background(Color.black.ignoresSafeArea())
             .alert(isPresented: $showAlert){
                 Alert(title: Text(""),
                       message: Text(""),
@@ -68,7 +68,7 @@ struct ContentView: View {
     }
     func buttonColor (_ cell: String)-> Color{
         if (cell == "AC" || cell == "DEL"){return .gray}
-        if (cell == "-" || cell == "-") || operators.contains(cell){return .green}
+        if (cell == "-" || cell == "-") || operators.contains(cell){return .purple}
         return .white
     }
     func buttonPreass(cell: String){
